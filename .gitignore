@@ -1,0 +1,5 @@
+/node_modules
+storage.json
+/lib/config/index.js
+package-lock.json
+/test.js
