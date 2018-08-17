@@ -3,3 +3,4 @@ storage.json
 /lib/config/index.js
 package-lock.json
 /test.js
+/logs/development.log
