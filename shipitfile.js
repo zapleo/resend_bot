@@ -1,8 +1,23 @@
 module.exports = shipit => {
 	
   require('shipit-deploy')(shipit)
+  require('shipit-shared')(shipit);
 
   shipit.initConfig({
+    shared: {
+      files: [
+        {
+          path: 'lib/config/index.js',
+          overwrite: false,
+          chmod: '755',
+        },
+        {
+          path: 'storage.json',
+          overwrite: false,
+          chmod: '755'
+        }
+      ],
+    },
     default: {
       deployTo: '/home/deploy/resend_bot',
       repositoryUrl: 'https://github.com/zapleo/resend_bot.git',
